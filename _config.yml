@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Minjae Lee # the main title
 
-tagline: "Graduate student at POSTECH<br>Machine Learning Lab<br>GSAI"
+tagline: Graduate student at POSTECH
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
