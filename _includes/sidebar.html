@@ -8,13 +8,17 @@
           {% include media-url.html src=site.avatar %}
         {%- endcapture -%}
         <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
-      {%- endif -%}
-    </a>
-
-    <h1 class="site-title">
-      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    </h1>
-    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+        {%- endif -%}
+      </a>
+      
+      <h1 class="site-title">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </h1>
+      <p>
+        <a class="site-subtitle fst-italic mb-0">{{ site.tagline }}</a><br>
+        <a href="https://ml.postech.ac.kr"><u>Machine Learning Lab</u></a><br>
+        <a href="https://ai.postech.ac.kr"><u>GSAI</u></a>
+      </p>
   </header>
   <!-- .profile-wrapper -->
 
