@@ -1,7 +1,6 @@
 ---
-# the default layout is 'page'
 icon: fas fa-star
-order: 2
+order: 1
 ---
 
 # 2024
