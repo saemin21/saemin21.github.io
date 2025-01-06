@@ -27,3 +27,8 @@ package-lock.json
 # Obsidian
 .obsidian
 obsidian/
+
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
