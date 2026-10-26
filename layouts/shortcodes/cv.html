@@ -1,0 +1,49 @@
+{{- /* Full CV from data/cv/*.yaml + data/publications/*.yaml; cv/cv.typ builds the PDF from the same files */ -}}
+{{- $cv := site.Data.cv -}}
+{{- $me := $cv.profile -}}
+<div class="cv">
+<p class="cv-contact">
+  {{ $me.position }}, {{ $me.affiliation }} · {{ $me.address }}<br>
+  <a href="mailto:{{ $me.email }}">{{ $me.email }}</a> ·
+  <a href="https://github.com/{{ $me.github }}">github.com/{{ $me.github }}</a> ·
+  <a href="{{ "cv.pdf" | absURL }}">PDF</a>
+</p>
+
+<h2>Education</h2>
+{{- range $cv.education }}
+<div class="cv-entry">
+  <div class="cv-date">{{ .start }} ~ {{ .end }}</div>
+  <div class="cv-body">
+    <strong>{{ .school }}</strong><br>{{ .department }}
+    {{- range .details }}<br><em>{{ . }}</em>{{ end }}
+  </div>
+</div>
+{{- end }}
+
+<h2>Research Interests</h2>
+<ul>{{ range $cv.interests }}<li>{{ . }}</li>{{ end }}</ul>
+
+<h2>Publications</h2>
+<ol class="cv-pubs">
+  {{- range partial "pubs_by_year.html" . }}
+  {{- range .pubs }}<li>{{ partial "pub_item.html" (dict "pub" . "short" true) }}</li>{{ end }}
+  {{- end }}
+</ol>
+
+<h2>Awards and Honors</h2>
+<ul>
+{{- range $cv.awards }}
+  <li>{{ .title }}, {{ .location }} ({{ .date }}){{ with .detail }}<br><small>{{ . }}</small>{{ end }}</li>
+{{- end }}
+</ul>
+
+<h2>Research Experience</h2>
+<ul>
+{{- range $cv.experience }}
+  <li>{{ .role }} ({{ .period }}){{ with .detail }}<br><small>{{ . }}</small>{{ end }}</li>
+{{- end }}
+</ul>
+
+<h2>Skills</h2>
+<ul>{{ range $cv.skills }}<li>{{ . }}</li>{{ end }}</ul>
+</div>

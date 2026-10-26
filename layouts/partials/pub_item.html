@@ -1,0 +1,21 @@
+{{- /* One publication. ctx: dict "pub" . "short" bool */ -}}
+{{- $cv := site.Data.cv -}}
+{{- $p := .pub -}}
+<div class="pub-item">
+  <div class="pub-title">{{ $p.title }}</div>
+  <div class="pub-authors">{{ partial "pub_authors.html" (dict "pub" $p "me" $cv.profile.name "short" .short) }}</div>
+  <div class="pub-venue"><em>{{ $p.venue }}</em>, {{ $p.year }}</div>
+  {{- if or $p.tag $p.awards $p.workshops }}
+  <div class="pub-badges">
+    {{- with $p.tag }}<span class="pub-tag pub-tag-{{ . | urlize }}">{{ . }}</span>{{ end }}
+    {{- range $p.awards }}<span class="pub-award">🏆 {{ . }}</span>{{ end }}
+    {{- range $p.workshops }}<span class="pub-workshop">{{ . }}</span>{{ end }}
+  </div>
+  {{- end }}
+  {{- with $p.links }}
+  <div class="pub-links">
+    {{- range $k, $v := . }}<a href="{{ $v }}" target="_blank" rel="noopener">{{ $k }}</a>{{ end }}
+  </div>
+  {{- end }}
+  {{- if gt ($p.equal | default 0) 0 }}<div class="pub-note">*: equal contribution</div>{{ end }}
+</div>

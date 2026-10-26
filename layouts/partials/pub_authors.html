@@ -1,0 +1,19 @@
+{{- /* Author list: bolds the CV owner, marks equal contribution.
+       ctx: dict "pub" . "me" name "short" bool — short shortens very long lists (CV page). */ -}}
+{{- $pub := .pub -}}
+{{- $me := .me -}}
+{{- $equal := $pub.equal | default 0 -}}
+{{- $n := len $pub.authors -}}
+{{- $out := slice -}}
+{{- range $i, $a := $pub.authors -}}
+  {{- $s := $a -}}
+  {{- if lt $i $equal }}{{ $s = printf "%s*" $s }}{{ end -}}
+  {{- if eq $a $me }}{{ $s = printf "<strong>%s</strong>" $s }}{{ end -}}
+  {{- $out = $out | append $s -}}
+{{- end -}}
+{{- if and .short (gt $n 8) -}}
+  {{- $mine := slice -}}
+  {{- range $i, $a := $pub.authors }}{{ if eq $a $me }}{{ $mine = $mine | append (index $out $i) }}{{ end }}{{ end -}}
+  {{- $out = (first 3 $out) | append "…" | append $mine | append (printf "… (%d authors)" $n) -}}
+{{- end -}}
+{{- delimit $out ", " | safeHTML -}}

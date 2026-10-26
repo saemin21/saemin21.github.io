@@ -1,0 +1,13 @@
+{{- /* Publications page: year on the left, that year's papers on the right */ -}}
+<div class="pub-list">
+{{- range partial "pubs_by_year.html" . }}
+  <section class="pub-year-group" id="y{{ .year }}">
+    <div class="pub-year">{{ .year }}</div>
+    <div class="pub-year-items">
+      {{- range .pubs }}
+      {{ partial "pub_item.html" (dict "pub" .) }}
+      {{- end }}
+    </div>
+  </section>
+{{- end }}
+</div>

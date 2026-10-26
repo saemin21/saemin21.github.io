@@ -1,0 +1,17 @@
+# Publications from 2024, in display order. The year comes from the file name.
+#   venue:     printed as-is, followed by the year
+#   tag:       venue badge (e.g. NeurIPS) — omit for preprints
+#   awards:    shown with a trophy
+#   workshops: other venues where the paper also appeared
+#   equal:     number of leading authors with equal contribution (marked with *)
+#   links:     button label -> URL
+
+- title: "Selective Generation for Controllable Language Models"
+  authors: [Minjae Lee, Kyungmin Kim, Taesoo Kim, Sangdon Park]
+  equal: 2
+  venue: Neural Information Processing Systems
+  tag: NeurIPS
+  awards: [Spotlight, POSTECH GSAI BK21 Best Paper Award]
+  links:
+    arXiv: https://arxiv.org/abs/2307.09254
+    OpenReview: https://openreview.net/forum?id=glfYOAzh2f

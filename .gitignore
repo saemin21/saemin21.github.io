@@ -1,34 +1,7 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
-
-# Jekyll cache
-.jekyll-cache
-.jekyll-metadata
-_site
-
-# RubyGems
-*.gem
-
-# NPM dependencies
-node_modules
-package-lock.json
-
-# IDE configurations
-.idea
-.vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
-!.vscode/tasks.json
-
-# Misc
-
-# Obsidian
-.obsidian
-obsidian/
-
+public/
+resources/_gen/
+.hugo_build.lock
 .DS_Store
-._.DS_Store
-**/.DS_Store
-**/._.DS_Store
+
+# built from data/cv.yaml by cv/cv.typ (CI builds it on deploy)
+static/cv.pdf

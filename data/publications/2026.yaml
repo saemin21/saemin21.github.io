@@ -1,0 +1,23 @@
+# Publications from 2026, in display order. The year comes from the file name.
+#   venue:     printed as-is, followed by the year
+#   tag:       venue badge (e.g. NeurIPS) — omit for preprints
+#   awards:    shown with a trophy
+#   workshops: other venues where the paper also appeared
+#   equal:     number of leading authors with equal contribution (marked with *)
+#   links:     button label -> URL
+
+- title: "Online Conformal Abstention Under Adversarial Bandit Feedback"
+  authors: [Minjae Lee, Yoonjae Jung, Sangdon Park]
+  equal: 2
+  venue: The Fortieth Annual Conference on Neural Information Processing Systems
+  tag: NeurIPS
+  awards: [Best Paper Finalist from CKAIA]
+  workshops: [ICLR'26 Reliable Autonomy Workshop]
+  links:
+    arXiv: https://arxiv.org/abs/2506.14067
+
+- title: "Which Preferences to Train On? End-to-End Multi-Objective Alignment with an Adversarial Preference Distribution"
+  authors: [Minjae Lee, Kyunghyun Cho, Sangdon Park]
+  venue: arXiv preprint arXiv:2610.04845
+  links:
+    arXiv: https://arxiv.org/abs/2610.04845

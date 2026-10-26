@@ -1,0 +1,5 @@
+{{- /* Load KaTeX CSS only on pages that rendered math. .WordCount forces content rendering first. */ -}}
+{{- $noop := .WordCount -}}
+{{- if .Page.Store.Get "hasMath" }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
+{{- end }}

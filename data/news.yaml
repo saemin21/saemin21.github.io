@@ -1,0 +1,14 @@
+# Home page news, newest first. `text` is markdown.
+
+- date: Oct. 2026
+  text: Preprint *"Which Preferences to Train On? End-to-End Multi-Objective Alignment with an Adversarial Preference Distribution"* is on [arXiv](https://arxiv.org/abs/2610.04845).
+- date: Sep. 2026
+  text: '*"Online Conformal Abstention Under Adversarial Bandit Feedback"* is accepted to **NeurIPS 2026**.'
+- date: Sep. 2026
+  text: Visiting New York University until Nov. 2026.
+- date: Aug. 2025
+  text: 🏆 Team Atlanta won the [DARPA AI Cyber Challenge (AIxCC)](https://aicyberchallenge.com/) ($4M first prize). I was lucky to join the team during the final round.
+- date: Jul. 2025
+  text: Visiting New York University (Jul.–Aug. 2025).
+- date: Sep. 2024
+  text: '*"Selective Generation for Controllable Language Models"* is accepted to **NeurIPS 2024** as a **Spotlight**.'

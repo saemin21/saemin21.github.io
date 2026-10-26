@@ -1,0 +1,99 @@
+baseURL: https://saemin21.github.io/
+title: Minjae Lee
+theme: ["PaperMod"]
+languageCode: en
+timeZone: Asia/Seoul
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainSections: ["posts"]
+minify:
+  disableXML: true
+
+menu:
+  main:
+    - name: Publications
+      url: publications/
+      weight: 1
+    - name: CV
+      url: cv/
+      weight: 2
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: Minjae Lee's homepage and blog
+  author: Minjae Lee
+
+  defaultTheme: auto
+  ShowShareButtons: false
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowAllPagesInArchive: false
+  ShowPageNums: true
+  ShowToc: true
+
+  profileMode:
+    enabled: true
+    title: Minjae Lee (이민재)
+    subtitle: |
+      Ph.D. Student · [Machine Learning Lab](https://ml.postech.ac.kr) · [GSAI](https://ai.postech.ac.kr), [POSTECH](https://postech.ac.kr)
+    imageUrl: img/profile.jpg
+    imageTitle: Minjae Lee
+    imageWidth: 150
+    imageHeight: 150
+    buttons:
+      - name: Publications
+        url: publications/
+      - name: CV
+        url: cv/
+
+  socialIcons:
+    - name: email
+      title: minjae.lee@postech.ac.kr
+      url: "mailto:minjae.lee@postech.ac.kr"
+    - name: github
+      title: GitHub
+      url: "https://github.com/saemin21"
+    - name: x
+      title: X
+      url: "https://x.com/mj_postech"
+    - name: cv
+      title: CV (PDF)
+      url: "cv.pdf"
+
+  assets:
+    disableHLJS: true
+
+# Blog posts are hidden for now (see content/posts/_index.md), so no taxonomy/RSS pages.
+disableKinds: [taxonomy, term, rss]
+
+outputs:
+  home:
+    - HTML
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [["\\[", "\\]"], ["$$", "$$"]]
+          inline: [["\\(", "\\)"], ["$", "$"]]
+  highlight:
+    noClasses: false
+
+services:
+  instagram:
+    disableInlineCSS: true
+  x:
+    disableInlineCSS: true

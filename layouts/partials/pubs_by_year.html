@@ -1,0 +1,12 @@
+{{- /* Returns [{year, pubs}] from data/publications/<year>.yaml, newest year first.
+       Each pub gets a `year` field from its file name. */ -}}
+{{- $years := slice -}}
+{{- range $y, $_ := site.Data.publications }}{{ $years = $years | append $y }}{{ end -}}
+{{- $out := slice -}}
+{{- range sort $years "value" "desc" -}}
+  {{- $y := . -}}
+  {{- $pubs := slice -}}
+  {{- range index site.Data.publications $y }}{{ $pubs = $pubs | append (merge . (dict "year" $y)) }}{{ end -}}
+  {{- $out = $out | append (dict "year" $y "pubs" $pubs) -}}
+{{- end -}}
+{{- return $out -}}
