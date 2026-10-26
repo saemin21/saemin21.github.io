@@ -6,6 +6,12 @@
 #   equal:     number of leading authors with equal contribution (marked with *)
 #   links:     button label -> URL
 
+- title: "Which Preferences to Train On? End-to-End Multi-Objective Alignment with an Adversarial Preference Distribution"
+  authors: [Minjae Lee, Kyunghyun Cho, Sangdon Park]
+  venue: arXiv preprint arXiv:2610.04845
+  links:
+    arXiv: https://arxiv.org/abs/2610.04845
+    
 - title: "Online Conformal Abstention Under Adversarial Bandit Feedback"
   authors: [Minjae Lee, Yoonjae Jung, Sangdon Park]
   equal: 2
@@ -16,8 +22,3 @@
   links:
     arXiv: https://arxiv.org/abs/2506.14067
 
-- title: "Which Preferences to Train On? End-to-End Multi-Objective Alignment with an Adversarial Preference Distribution"
-  authors: [Minjae Lee, Kyunghyun Cho, Sangdon Park]
-  venue: arXiv preprint arXiv:2610.04845
-  links:
-    arXiv: https://arxiv.org/abs/2610.04845
