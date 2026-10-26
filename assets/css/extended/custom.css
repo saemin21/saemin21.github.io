@@ -62,7 +62,7 @@ iframe {
 .pub-authors,
 .pub-venue {
     margin-top: 0.2rem;
-    font-size: 0.92em;
+    font-size: 0.84em;
     color: var(--secondary);
 }
 
@@ -75,8 +75,8 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: 0.55rem;
-    font-size: 0.8em;
+    margin-top: 0.5rem;
+    font-size: 0.74em;
     line-height: 1.5;
 }
 
@@ -122,8 +122,8 @@ iframe {
 }
 
 .pub-note {
-    margin-top: 0.4rem;
-    font-size: 0.75em;
+    margin-top: 0.35rem;
+    font-size: 0.66em;
     color: var(--secondary);
 }
 
